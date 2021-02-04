@@ -1,98 +1,116 @@
 @media only screen and (min-width: 800px) {
 
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-     }
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color:#175A72;
-    padding: 10px;
-    max-width: 100%;
-    grid-gap: 40px 50px;
-    justify-items: center;
-    grid-template-areas: 
-    "header header header header"
-    "nav nav nav nav"
-    "main main"
-    "footer footer footer footer";
-        
-    }
-
-    .item1 {
-        grid-area: header;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        border-bottom: 1px solid black;
-        padding: 25px;
-        font-size: 20px;
+    header {
+        grid-row: 1;
+        grid-template-columns:1;
         text-align: center;
-        width: 50%;
-        color: black;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+       
 
 
     } 
     
-    .item2 {
-        grid-area: main;
-        grid-row-start: 4;
-        grid-row-end: ;
-        font-size: 30px;
-        max-width: 50%;
-        top: 99px;
-        left: 50px;
-        position: absolute;
+    main {
+        display: grid;
+        grid-template-columns: 1.5fr 3fr 1.5fr;
+        grid-template-rows: repeat(auto, minmax(150px, auto));
         
+
     }
 
-  
 
-    .button{
-        background-color: green;
-        font-size: 30px;
+    .f{
+        display: flex nowrap;
+        grid-row: 2;
+        grid-column: 2;
+       
+       
+    }
+
+    input, label{
+        display: block;
+
+    }
+
+    input[type=submit]{
         float: right;
     }
 
+    input[type=text]{
+        width:60%;
+    }
 
-   
+    textarea[id=content]{
+        width:100%;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: grey;
+    }
+
+    nav{
+        grid-column: 3;
+        margin-top: 10px;
+        text-align:center;
+    }
+
+    .korta{
+        display: flex;
     
-    
-    .kort {
-        float: left;
-        width: 25%;
-        padding: 0 10px;
-        
+       grid-row:6;
+       grid-column: 2;
+      
        
-      }
+       
+    }
 
-     
-    
-      .kort1 {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .kortin{
+        
         padding: 16px;
         text-align: left;
-        background-color: #f1f1f1;
         font-size: 10px;
         margin: 10px;
-        
-      }  
+    }
+
+    .korta2{
+        display: flex;
     
+       grid-row:7;
+       grid-column: 2;
       
-      .boks {
-          margin: 10%;
+       
+       
+    }
 
-        }
+    .kortin2{
+        
+        padding: 16px;
+        text-align: left;
+        font-size: 10px;
+        margin: 10px;
+    }
 
-        .b{
-            float:right;
-            background-color: green;
+    
+  
+    .todo{
+        grid-row:4;
+        grid-column:2;
+        
 
-        }
+    }
 
- }
+    .b{
+    
+    
+    color:white;
+    background-color: green;
+    
+
+    }
+
+    .b2{
+        color:green;
+        float: right;
+    }
+
+}
