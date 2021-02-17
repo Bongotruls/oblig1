@@ -234,9 +234,7 @@ try {
   
   (function UseParameterDestructuring1() {
     // Adjust the code to let the test succeed.
-	var name = 'Oslo';
-	var age= 985;
-    const a = [name, age];
+    const a = ['Oslo', 985];
 
     // Don't make changes below this line
 
