@@ -43,7 +43,7 @@ try {
 		const addOne = x => x + 1;
 		
 		// Rewrite the line below to use template literals.
-		const greeting = "Hello " + who + "! " + addOne(2) + " times.";
+		const greeting = `Hello ${who}! ${addOne(2)} times.`;
 
 		// Don't make changes below this line	
 		
@@ -61,11 +61,8 @@ try {
 		// Correct the syntax errors in the function.
 		//her måtte jeg lage en if test da svarene trenger 2 forskjellige utfall
 		//hvis who = 0 skal den skrive hello world, men hvis den får en verdi skal den gi hello react
-		function hello(who) {
-			if (who == null) {
-				who = 'World';
-		}
-			return 'Hello ' + who +  '!';
+		function hello(who = 'World') {
+			return 'Hello ' + who  + '!';
 		}
 
 		// Don't make changes below this line	
@@ -199,7 +196,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		({ a, b } = newFunction(a, b)); 
+		[a, b] = [b, a] 
 
 		// Don't make changes below this line	
 		
@@ -257,9 +254,7 @@ try {
   
   (function UseParameterDestructuring2() {
     // Adjust the code to let the test succeed.
-	var name = 'Oslo';
-	var age= 985;
-    const a = ({ name, age })
+	const a = {name:"Oslo", age:985};
 
     // Don't make changes below this line
 
